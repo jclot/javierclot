@@ -107,6 +107,15 @@
   position: relative;
 }
 
+.imageBackground {
+  background-image: url("../../public/giammarco-boscaro-zeH-ljawHtg-unsplash.jpg");
+  padding: 15rem;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
