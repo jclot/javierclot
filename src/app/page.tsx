@@ -7,7 +7,7 @@ export default function Home() {
       <div className={styles.image_background}>
         <div className={styles.welcome}>
           <div className={styles.main_title}>
-            <h1>JAVIER<br></br>CLOT</h1>
+            <h1>JAVIER CLOT</h1>
           </div>
           <div className={styles.main_description}>
             <p>aksndhjla shdjashdl;ahjs;lkdj ksljdaklsjdkl;ajskldja skldjalksjdaskdljalsk;d asdhaksjdh jasd asdasdasd asdasd </p>
