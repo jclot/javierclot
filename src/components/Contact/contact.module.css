@@ -1,0 +1,91 @@
+.contact_forma {
+    font-family: var(--font-mono);
+    background-color: #1f2839;
+}
+
+.contact_form {
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.contact_title {
+    text-align: center;
+    font-size: 2rem;
+    color: #B69D74;
+}
+
+.form_group {
+    margin-bottom: 20px;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #B69D74;
+    font-size: 1.5rem;
+}
+
+.form_group input,
+.form_group textarea {
+    width: 100%;
+    padding: 10px;
+    color: #1f2839;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+    border-color: #f5f5f5;
+    outline: none;
+}
+
+.form_group textarea {
+    resize: vertical;
+    min-height: 150px;
+    border-radius: 5px;
+}
+
+.submit_button {
+    display: inline;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #f5f5f5;
+    background-color: #B69D74;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit_button:hover {
+    background-color: #B69D74;
+}
+
+.form_group input:-webkit-autofill,
+.form_group input:-webkit-autofill:hover,
+.form_group input:-webkit-autofill:focus,
+.form_group input:-webkit-autofill:active,
+.form_group textarea:-webkit-autofill,
+.form_group textarea:-webkit-autofill:hover,
+.form_group textarea:-webkit-autofill:focus,
+.form_group textarea:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+    -webkit-text-fill-color: #1f2839 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form_group input:autofill,
+.form_group input:autofill:hover,
+.form_group input:autofill:focus,
+.form_group input:autofill:active,
+.form_group textarea:autofill,
+.form_group textarea:autofill:hover,
+.form_group textarea:autofill:focus,
+.form_group textarea:autofill:active {
+    box-shadow: 0 0 0 30px #f5f5f5 inset !important;
+    -webkit-text-fill-color: #1f2839 !important;
+}
