@@ -1,26 +1,37 @@
 "use client";
 
 import styles from "./contact.module.css";
-import React, { useRef, FormEvent } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState, FormEvent } from 'react';
 
 const ContactForm: React.FC = () => {
-    const form = useRef<HTMLFormElement>(null);
+    const [status, setStatus] = useState<string>('');
 
-    const sendEmail = (e: FormEvent) => {
+    const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setStatus('Sending...');
 
-        if (form.current) {
-            emailjs
-                .sendForm('service_1qxpxhf', 'template_8bl5qbt', form.current, 'aoP9GOS9tYxE8lMp5')
-                .then(
-                    () => {
-                        console.log("SUCESS");
-                    },
-                    (error) => {
-                        console.log('FAILED', error.text);
-                    },
-                );
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setStatus('Email sent successfully!');
+                form.reset();
+            } else {
+                setStatus('Failed to send email. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setStatus('An error occurred. Please try again.');
         }
     };
 
@@ -29,7 +40,7 @@ const ContactForm: React.FC = () => {
             <div className={styles.contact_title}>
                 <h1>Contact</h1>
             </div>
-            <form autoComplete="off" ref={form} onSubmit={sendEmail} className={styles.contact_form}>
+            <form autoComplete="off" onSubmit={sendEmail} className={styles.contact_form}>
                 <div className={styles.form_group}>
                     <label htmlFor="name">Name</label>
                     <input autoComplete="off" type="text" id="name" name="user_name" />
