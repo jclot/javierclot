@@ -1,6 +1,7 @@
 .contact_forma {
     font-family: var(--font-mono);
     background-color: #1f2839;
+    padding: 20px
 }
 
 .contact_form {
@@ -34,12 +35,12 @@
     color: #1f2839;
     background-color: #f5f5f5;
     border-radius: 5px;
+    border: none;
 
 }
 
 .form_group input:focus,
 .form_group textarea:focus {
-    border-color: #f5f5f5;
     outline: none;
 }
 
@@ -52,6 +53,7 @@
 .submit_button {
     display: inline;
     padding: 10px 20px;
+    font-family: var(--font-mono);
     font-size: 20px;
     color: #f5f5f5;
     background-color: #B69D74;
