@@ -36,24 +36,24 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <div className={styles.contact_forma}>
-            <div className={styles.contact_title}>
+        <div className={styles.contactForma}>
+            <div className={styles.contactTitle}>
                 <h1>Contact</h1>
             </div>
-            <form autoComplete="off" onSubmit={sendEmail} className={styles.contact_form}>
-                <div className={styles.form_group}>
+            <form autoComplete="off" onSubmit={sendEmail} className={styles.contactForm}>
+                <div className={styles.formGroup}>
                     <label htmlFor="name">Name</label>
                     <input autoComplete="off" type="text" id="name" name="user_name" />
                 </div>
-                <div className={styles.form_group}>
+                <div className={styles.formGroup}>
                     <label htmlFor="email">Email</label>
                     <input autoComplete="off" type="email" id="email" name="user_email" />
                 </div>
-                <div className={styles.form_group}>
+                <div className={styles.formGroup}>
                     <label htmlFor="message">Message</label>
                     <textarea id="message" name="message" required />
                 </div>
-                <button type="submit" className={styles.submit_button}>Submit</button>
+                <button type="submit" className={styles.submitButton}>SUBMIT</button>
             </form>
         </div>
     );
