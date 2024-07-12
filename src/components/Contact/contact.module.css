@@ -1,26 +1,26 @@
-.contact_forma {
+.contactForma {
     font-family: var(--font-mono);
     background-color: #1f2839;
     padding: 20px
 }
 
-.contact_form {
+.contactForm {
     max-width: 600px;
     padding: 20px;
     margin: 0 auto;
 }
 
-.contact_title {
+.contactTitle {
     text-align: center;
     font-size: 2rem;
     color: #B69D74;
 }
 
-.form_group {
+.formGroup {
     margin-bottom: 20px;
 }
 
-.form_group label {
+.formGroup label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
@@ -28,8 +28,8 @@
     font-size: 1.5rem;
 }
 
-.form_group input,
-.form_group textarea {
+.formGroup input,
+.formGroup textarea {
     width: 100%;
     padding: 10px;
     color: #1f2839;
@@ -39,18 +39,18 @@
 
 }
 
-.form_group input:focus,
-.form_group textarea:focus {
+.formGroup input:focus,
+.formGroup textarea:focus {
     outline: none;
 }
 
-.form_group textarea {
+.formGroup textarea {
     resize: vertical;
     min-height: 150px;
     border-radius: 5px;
 }
 
-.submit_button {
+.submitButton {
     display: inline;
     padding: 10px 20px;
     font-family: var(--font-mono);
@@ -63,31 +63,31 @@
     transition: background-color 0.3s ease;
 }
 
-.submit_button:hover {
-    background-color: #B69D74;
+.submitButton:hover {
+    background-color: #1F2839;
 }
 
-.form_group input:-webkit-autofill,
-.form_group input:-webkit-autofill:hover,
-.form_group input:-webkit-autofill:focus,
-.form_group input:-webkit-autofill:active,
-.form_group textarea:-webkit-autofill,
-.form_group textarea:-webkit-autofill:hover,
-.form_group textarea:-webkit-autofill:focus,
-.form_group textarea:-webkit-autofill:active {
+.formGroup input:-webkit-autofill,
+.formGroup input:-webkit-autofill:hover,
+.formGroup input:-webkit-autofill:focus,
+.formGroup input:-webkit-autofill:active,
+.formGroup textarea:-webkit-autofill,
+.formGroup textarea:-webkit-autofill:hover,
+.formGroup textarea:-webkit-autofill:focus,
+.formGroup textarea:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px #f5f5f5 inset !important;
     -webkit-text-fill-color: #1f2839 !important;
     transition: background-color 5000s ease-in-out 0s;
 }
 
-.form_group input:autofill,
-.form_group input:autofill:hover,
-.form_group input:autofill:focus,
-.form_group input:autofill:active,
-.form_group textarea:autofill,
-.form_group textarea:autofill:hover,
-.form_group textarea:autofill:focus,
-.form_group textarea:autofill:active {
+.formGroup input:autofill,
+.formGroup input:autofill:hover,
+.formGroup input:autofill:focus,
+.formGroup input:autofill:active,
+.formGroup textarea:autofill,
+.formGroup textarea:autofill:hover,
+.formGroup textarea:autofill:focus,
+.formGroup textarea:autofill:active {
     box-shadow: 0 0 0 30px #f5f5f5 inset !important;
     -webkit-text-fill-color: #1f2839 !important;
 }
