@@ -15,7 +15,6 @@
 }
 
 .navLinks {
-  list-style: lower-latin;
   display: flex;
   gap: 2rem;
   margin: 0;
@@ -23,12 +22,13 @@
 }
 
 .navLinks li {
-  display: inline;
+  position: relative;
+  list-style: none;
 }
 
 .navLinks li a {
   color: #F5F5F5;
-  /* text-decoration: underline; */
+  text-decoration: underline;
   font-size: 1.5rem;
   transition: color 0.1s ease-in-out;
 }
@@ -37,7 +37,34 @@
   color: #B69D74;
 }
 
-/* Media Queries for Responsive Design */
+.dropDownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #B69D74;
+  z-index: 1;
+}
+
+.dropDown:hover .dropDownMenu,
+.dropDownMenu.show {
+  display: block;
+}
+
+.dropDownMenu li {
+  padding: 8px 35px;
+  text-align: center;
+}
+
+.dropDownMenu li a {
+  color: #F5F5F5;
+  text-decoration: underline;
+}
+
+.dropDownMenu li a:hover {
+  color: #F5F5F5;
+}
+
 @media (max-width: 871px) {
   .navbar {
     flex-direction: column;
@@ -57,6 +84,24 @@
   .logo {
     margin: 1.5rem;
   }
+
+  .dropDownMenu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .dropDownMenu li {
+    padding: 8px 16px;
+  }
+
+  .dropDownMenu li a {
+    color: #F5F5F5;
+  }
+
+  .dropDownMenu li a:hover {
+    background: #B69D74;
+  }
 }
 
 @media (max-width: 480px) {
@@ -70,5 +115,9 @@
 
   .navLinks li a {
     font-size: 1rem;
+  }
+
+  .dropdownMenu li {
+    padding: 8px 12px;
   }
 }
