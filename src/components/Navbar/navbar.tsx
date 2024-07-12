@@ -1,8 +1,16 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 
 const Navbar: React.FC = () => {
+    const [dropDownOpen, setDropDownOpen] = useState(false);
+
+    const toggleDropDown = () => {
+        setDropDownOpen(!dropDownOpen);
+    }
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
@@ -12,8 +20,21 @@ const Navbar: React.FC = () => {
                 <li>
                     <Link href="/">Home</Link>
                 </li>
-                <li>
+                <li className={styles.dropDown} onMouseEnter={toggleDropDown} onMouseLeave={toggleDropDown}>
                     <Link href="/areas">Areas of practice</Link>
+                    {dropDownOpen && (
+                        <ul className={styles.dropDownMenu}>
+                            <li>
+                                <Link href="/areas">Practice 1</Link>
+                            </li>
+                            <li>
+                                <Link href="/areas">Practice 2</Link>
+                            </li>
+                            <li>
+                                <Link href="/areas">Practice 3</Link>
+                            </li>
+                        </ul>
+                    )}
                 </li>
                 <li>
                     <Link href="/industries">Industries</Link>
