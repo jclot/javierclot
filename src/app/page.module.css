@@ -69,7 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 5px;
+  padding: 10px;
 }
 
 .biographyTitle {
@@ -90,37 +90,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 5px;
+  padding: 10px;
 }
 
 .specializationTitle {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #f5f5f5;
   text-decoration: underline;
-  margin: 2rem 0;
+  margin: 2rem;
 }
 
 .specializationDescription {
   color: #f5f5f5;
   text-align: center;
   max-width: 500px;
-  font-size: 0.8rem;
+  margin-bottom: 3rem;
 }
 
 .services {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 5px;
+  padding: 10px;
 }
 
 .servicesTitle {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #f5f5f5;
   text-decoration: underline;
-  margin: 2rem 0;
+  margin: 2rem;
 }
 
 .servicesDescription {
@@ -128,7 +128,6 @@
   text-align: center;
   max-width: 500px;
   margin-bottom: 3rem;
-  font-size: 0.8rem;
 }
 
 @media (max-width: 700px) {
