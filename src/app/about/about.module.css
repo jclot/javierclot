@@ -1,0 +1,31 @@
+.about {
+    font-family: var(--font-mono);
+    background-color: #1f2839;
+    padding: 20px;
+}
+
+.aboutTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: #B69D74;
+}
+
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.text {
+    text-align: center;
+    margin: 20px;
+    color: #f5f5f5;
+}
