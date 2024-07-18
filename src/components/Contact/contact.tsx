@@ -7,7 +7,6 @@ const ContactForm: React.FC = () => {
     const [status, setStatus] = useState<string>('');
 
     const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
         setStatus('Sending...');
 
         const form = e.currentTarget;
