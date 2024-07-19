@@ -1,14 +1,14 @@
 .map {
-    border: 0;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .map iframe {
-    border: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    display: block; 
-    border-top: var(--breakpoint)
-  }
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.map iframe {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: block;
+  border-top: 2px solid #f5f5f5;
+}
