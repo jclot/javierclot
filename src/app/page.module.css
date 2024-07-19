@@ -11,10 +11,6 @@
   width: 100%;
 }
 
-.mainContentBreak {
-  border: var(--breakpoint);
-}
-
 .imageBackground {
   background-image: url("/giammarco-boscaro-zeH-ljawHtg-unsplash.jpg");
   padding: 0;

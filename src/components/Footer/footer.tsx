@@ -4,7 +4,7 @@ import styles from "./footer.module.css";
 const Footer: React.FC = () => {
     return (
         <div>
-            <hr className={styles.mainContentBreak} />
+            <hr className="commonHr" />
             <footer className={styles.footer}>
                 <div className={styles.footerContent}>
                     <div className={styles.footerSection}>
