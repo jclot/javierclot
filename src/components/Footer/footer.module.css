@@ -7,7 +7,7 @@
 }
 
 .mainContentBreak {
-    border: var(--breakpoint)
+    border: 1px solid #f5f5f5
 }
 
 .footerContent {
