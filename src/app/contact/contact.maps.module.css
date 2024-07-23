@@ -1,15 +1,1 @@
-.contact {
-  background-color: #1f2839;
-}
-
-.map {
-  padding: 30px;
-  margin: 0;
-}
-
-.map iframe {
-  border: none;
-  padding: 0;
-  width: 100%;
-  display: block;
-}
+/* Se espera crear un <iframe /> con un mapa en google maps, sin embargo todavia no esta compuesto por problemas de disenho */

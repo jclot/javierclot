@@ -11,20 +11,21 @@
 }
 
 .content {
-    max-width: 470px;
+    max-width: 450px;
     margin: 0 auto;
     text-align: center;
 }
 
 .image {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
+
     max-width: fit-content;
     max-height: fit-content;
 }
 
 .text {
     text-align: center;
-    margin: 20px;
+    margin-bottom: 20px;
     color: #f5f5f5;
 }

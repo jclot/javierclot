@@ -24,7 +24,6 @@ const Footer: React.FC = () => {
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/areas">Areas of Practice</a></li>
-                            <li><a href="/industries">Industries</a></li>
                             <li><a href="/about">About Us</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>

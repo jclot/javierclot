@@ -10,11 +10,11 @@ const ContactForm: React.FC = () => {
             <form autoComplete="off" className={styles.contactForm}>
                 <div className={styles.formGroup}>
                     <label htmlFor="name">Name</label>
-                    <input autoComplete="off" type="text" id="name" name="user_name" />
+                    <input autoComplete="off" type="text" id="name" name="user_name" required />
                 </div>
                 <div className={styles.formGroup}>
                     <label htmlFor="email">Email</label>
-                    <input autoComplete="off" type="email" id="email" name="user_email" />
+                    <input autoComplete="off" type="email" id="email" name="user_email" required/>
                 </div>
                 <div className={styles.formGroup}>
                     <label htmlFor="message">Message</label>
