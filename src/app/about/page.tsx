@@ -11,7 +11,7 @@ const About: React.FC = () => {
       <div className={styles.content}>
         <div className={styles.image}>
           <Image
-            src="/28564542397_751b9d261e_b.jpg"
+            src="/fotoPersonal.jpg"
             alt="Picture of the author"
             width={400}
             height={267}

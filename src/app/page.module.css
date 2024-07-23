@@ -12,7 +12,7 @@
 }
 
 .imageBackground {
-  background-image: url("/giammarco-boscaro-zeH-ljawHtg-unsplash.jpg");
+  background-image: url("/fondoImagen.jpg");
   padding: 0;
   margin: 0;
   width: 100%;
@@ -62,7 +62,7 @@
 }
 
 .contactButton:hover {
-  background-color: #1F2839;
+  background-color: #ffd387;
 }
 
 .biography {
