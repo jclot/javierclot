@@ -25,13 +25,13 @@ const Navbar: React.FC = () => {
                     {dropDownOpen && (
                         <ul className={styles.dropDownMenu}>
                             <li>
-                                <Link href="/areas">Practice 1</Link>
+                                <Link href="/areas/practiceone">Practice 1</Link>
                             </li>
                             <li>
-                                <Link href="/areas">Practice 2</Link>
+                                <Link href="/areas/practicetwo">Practice 2</Link>
                             </li>
                             <li>
-                                <Link href="/areas">Practice 3</Link>
+                                <Link href="/areas/practicetree">Practice 3</Link>
                             </li>
                         </ul>
                     )}

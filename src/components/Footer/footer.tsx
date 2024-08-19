@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
                 <div className={styles.footerBottom}>
-                    <p>&copy; {new Date().getFullYear()} JAVIER CLOT. All rights reserved. Created by <a href="https://github.com/jclot/">Julian Clot</a>.</p>
+                    <p>&copy; {new Date().getFullYear()} JAVIER CLOT. All rights reserved. Created & developed by <a href="https://github.com/jclot/">Julian Clot</a>.</p>
                 </div>
             </footer>
         </div>
