@@ -12,14 +12,14 @@ const About: React.FC = () => {
         <div className={styles.image}>
           <Image
             src="/fotoPersonal.jpg"
-            alt="Picture of the author"
+            alt="Image by the author"
             width={400}
             height={267}
             style={{ border: "1px solid #f5f5f5" }}
           />
         </div>
         <div className={styles.text}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem sed leo eleifend tincidunt id ut lacus. Fusce feugiat ex risus, ac pharetra neque rutrum at. Donec gravida commodo ex ut cursus. Duis lacus libero, elementum in tincidunt eget, placerat non libero. Phasellus tortor elit, laoreet in vestibulum vitae, tristique in eros. Nullam vel diam tortor. Fusce vitae porttitor nisl. Duis lacinia porta ullamcorper. Aliquam erat volutpat. Curabitur a sollicitudin mi, non bibendum nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sagittis molestie tellus. Nunc scelerisque elit ut lobortis ullamcorper. Vestibulum sagittis accumsan magna, a laoreet nisl mattis eget. Quisque dui ante, maximus vitae lacus a, volutpat iaculis nisl. Pellentesque a est eget diam consectetur consequat sed sed quam.</p>
+          <p>Javier Clot is a dedicated professional whose dedication and passion for the law are well known. He is a person who values humane treatment, transparency, and honesty in all his interactions, in addition to his exceptional career in the notarial profession. Javier is distinguished by his empathy and his capacity to comprehend the needs of those who seek his advice, establishing a climate of confidence and trust. He can authentically connect with his clients through his meticulous approach and listening ability, providing solutions that not only meet the highest legal standards but also show a deep respect for the people who trust him.</p>
         </div>
       </div>
     </div>
