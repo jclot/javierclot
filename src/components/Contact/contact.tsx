@@ -13,8 +13,8 @@ const ContactForm: React.FC = () => {
                     <input autoComplete="off" type="text" id="name" name="user_name" required />
                 </div>
                 <div className={styles.formGroup}>
-                    <label htmlFor="email">Email</label>
-                    <input autoComplete="off" type="email" id="email" name="user_email" required/>
+                    <label htmlFor="email">E-mail</label>
+                    <input autoComplete="off" type="email" id="email" name="user_email" required />
                 </div>
                 <div className={styles.formGroup}>
                     <label htmlFor="message">Message</label>
