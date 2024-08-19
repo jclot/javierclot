@@ -47,6 +47,10 @@
   padding: 10px;
 }
 
+.mainDescription p {
+  font-style: italic;
+}
+
 .contactButton {
   background-color: #B69D74;
   color: #f5f5f5;
@@ -62,7 +66,7 @@
 }
 
 .contactButton:hover {
-  background-color: #ffd387;
+  background-color: #806a43;
 }
 
 .biography {
