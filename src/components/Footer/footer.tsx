@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
                     <div className={styles.footerSection}>
                         <h2>Contact me</h2>
                         <p>WhatsApp: <a href="tel:+50683827865">(+506) 8382-7865</a></p>
-                        <p>Email: <a href="mailto:jaclot@hotmail.com">jaclot@hotmail.com</a></p>
+                        <p>E-mail: <a href="mailto:jaclot@hotmail.com">jaclot@hotmail.com</a></p>
                     </div>
                     <div className={styles.footerLogo}>
                         <h1>JAVIER CLOT</h1>
