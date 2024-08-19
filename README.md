@@ -20,3 +20,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## About
+
+This project is the independent website of a lawyer who gives us some information about him and what he does. As practices or areas that involves his professionalism. This project is private and only for him. 
+I am using next js technology to build this website.
