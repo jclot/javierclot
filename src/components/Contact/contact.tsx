@@ -1,27 +1,106 @@
+"use client";
+
+import React, { useState, FormEvent } from "react";
 import styles from "./contact.module.css";
-import React, { useState, FormEvent } from 'react';
+import Modal from "../Modal/modal";
 
 const ContactForm: React.FC = () => {
+    const [formData, setFormData] = useState({
+        user_name: "",
+        user_email: "",
+        message: ""
+    });
+    const [status, setStatus] = useState<string | null>(null);
+    const [isModalSuccessOpen, setIsModalSuccessOpen] = useState<boolean>(false)
+    const [isModalFailureOpen, setIsModalFailureOpen] = useState<boolean>(false)
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        try {
+            const response = await fetch("/api/emails", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData),
+            });
+            const result = await response.json();
+            if (result.success) {
+                setStatus("Your message has been sent successfully!");
+                setIsModalSuccessOpen(true);
+            } else {
+                setStatus("Failed to send message.");
+                setIsModalFailureOpen(true);
+            }
+        } catch (error) {
+            console.error("Error sending message:", error);
+            setStatus("Failed to send message.");
+            setIsModalFailureOpen(true);
+        }
+    };
+
+    const closeModal = () => {
+        setIsModalSuccessOpen(false);
+        setIsModalFailureOpen(false);
+    };
+
     return (
         <div className={styles.contactForma}>
             <div className={styles.contactTitle}>
                 <h1>Contact</h1>
             </div>
-            <form autoComplete="off" className={styles.contactForm}>
+            <form autoComplete="off" className={styles.contactForm} onSubmit={handleSubmit}>
                 <div className={styles.formGroup}>
                     <label htmlFor="name">Name</label>
-                    <input autoComplete="off" type="text" id="name" name="user_name" required />
+                    <input
+                        autoComplete="off"
+                        type="text"
+                        id="name"
+                        name="user_name"
+                        value={formData.user_name}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className={styles.formGroup}>
                     <label htmlFor="email">E-mail</label>
-                    <input autoComplete="off" type="email" id="email" name="user_email" required />
+                    <input
+                        autoComplete="off"
+                        type="email"
+                        id="email"
+                        name="user_email"
+                        value={formData.user_email}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className={styles.formGroup}>
                     <label htmlFor="message">Message</label>
-                    <textarea id="message" name="message" required />
+                    <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <button type="submit" className={styles.submitButton}>SUBMIT</button>
             </form>
+            <Modal isOpen={isModalSuccessOpen} onClose={closeModal}>
+                <h2 style={{ marginBottom: 10, color: '#B69D74', fontStyle: 'italic' }}>Your message has been sent successfully!</h2>
+                <p>We will get back to you as soon as possible.</p>
+            </Modal>
+            <Modal isOpen={isModalFailureOpen} onClose={closeModal}>
+                <h2 style={{ marginBottom: 10, color: '#B69D74', fontStyle: 'italic' }}>Your message could not be sent.</h2>
+                <p>Please try again, or send an email directly to <a href="mailto:jaclot@hotmail.com">jaclot@hotmail.com</a>.</p>
+            </Modal>
         </div>
     );
 };
