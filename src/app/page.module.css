@@ -13,7 +13,7 @@
 
 .imageBackground {
   background-image: url("/fondoImagen.jpg");
-  padding: 0;
+  padding: 30px;
   margin: 0;
   width: 100%;
   background-size: cover;
