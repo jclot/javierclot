@@ -41,7 +41,7 @@ export default function Home() {
           </div>
         </section>
         <button onClick={async () => {
-          await fetch("/api/emails", {method: "POST"});
+          await fetch("/api/emails", { method: "POST" });
         }} >
           Send button
         </button>
