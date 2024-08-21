@@ -21,8 +21,8 @@ const PracticeTwo: React.FC = () => {
           alt="AreasOfPractice"
         />
         <div className={styles.cardContent}>
-          <h2 className={styles.cardTitle}>Card Title</h2>
-          <p className={styles.cardDescription}>This is a description of the card. It provides some details about the content or purpose of the card.</p>
+          <h2 className={styles.cardTitle}>Practice 2</h2>
+          <p className={styles.cardDescription}>This is a description of the card. It</p>
         </div>
       </div>
     </div>
