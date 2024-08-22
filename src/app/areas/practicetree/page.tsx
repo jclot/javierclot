@@ -7,22 +7,22 @@ const PracticeTree: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.areasIntroduction}>
         <div className={styles.areasTitle}>
-          <h1>Practice #3</h1>
+          <h1>Commercial law</h1>
         </div>
         <div className={styles.areasDescription}>
-          <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem sed leo eleifend tincidunt id ut lacus. Fusce feugiat ex risus, ac pharetra neque rutrum at. Donec gravida commodo ex ut cursus. Duis lacus libero, elementum in tincidunt eget, placerat non libero. Phasellus tortor elit, laoreet in vestibulum vitae, tristique in eros. Nullam vel diam tortor. Fusce vitae porttitor nisl. Duis lacinia porta ullamcorper. Aliquam erat volutpat. Curabitur a sollicitudin mi, non bibendum nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sagittis molestie tellus. Nunc scelerisque elit ut lobortis ullamcorper. Vestibulum sagittis accumsan magna, a laoreet nisl mattis eget. Quisque dui ante, maximus vitae lacus a, volutpat iaculis nisl. Pellentesque a est eget diam consectetur consequat sed sed quam.</p>
+          <p>Javier Clot assists businesses of all sizes in navigating the intricacies of the business world by offering knowledgeable legal counsel on commercial law. Protecting his clients' business interests, Javier provides a comprehensive service that includes everything from company incorporation to contract negotiation and drafting. In order to ensure that every transaction is handled with the highest care and precision, his expertise includes providing advice on mergers, acquisitions, and the resolution of commercial disputes. Javier Clot is committed to helping businesses expand and remain stable by providing them with legal solutions that boost their capacity to make money.</p>
         </div>
       </div>
       <div className={styles.card}>
         <Image
-          src="/fotoFirma.jpg"
+          src="/fotoPortafolio.jpg"
           width={1000}
           height={1000}
           alt="AreasOfPractice"
         />
         <div className={styles.cardContent}>
-          <h2 className={styles.cardTitle}>Practice 3</h2>
-          <p className={styles.cardDescription}>This is a description of the card. It</p>
+          <h2 className={styles.cardTitle}>Commercial law</h2>
+          <p className={styles.cardDescription} style={{textDecoration:'underline'}}><a href="https://www.britannica.com/money/business-law" target="_blank" rel="noopener noreferrer"></a>Learn more</p>
         </div>
       </div>
     </div>

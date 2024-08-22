@@ -44,7 +44,8 @@
   left: 0;
   background-color: #1F2839;
   z-index: 1;
-  grid-template-columns: 170px;
+  grid-template-columns: 162px;
+  border: 1px solid #F5F5F5;
 }
 
 .dropDown:hover .dropDownMenu,
@@ -53,8 +54,9 @@
 }
 
 .dropDownMenu li {
-  padding: 1rem;
+  padding: 0.6rem;
   text-align: center;
+  /* border: 1px solid #F5F5F5; */
 }
 
 .dropDownMenu li a {

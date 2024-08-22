@@ -7,22 +7,22 @@ const PracticeTwo: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.areasIntroduction}>
         <div className={styles.areasTitle}>
-          <h1>Practice #2</h1>
+          <h1>Labor law</h1>
         </div>
         <div className={styles.areasDescription}>
-          <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut sem sed leo eleifend tincidunt id ut lacus. Fusce feugiat ex risus, ac pharetra neque rutrum at. Donec gravida commodo ex ut cursus. Duis lacus libero, elementum in tincidunt eget, placerat non libero. Phasellus tortor elit, laoreet in vestibulum vitae, tristique in eros. Nullam vel diam tortor. Fusce vitae porttitor nisl. Duis lacinia porta ullamcorper. Aliquam erat volutpat. Curabitur a sollicitudin mi, non bibendum nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sagittis molestie tellus. Nunc scelerisque elit ut lobortis ullamcorper. Vestibulum sagittis accumsan magna, a laoreet nisl mattis eget. Quisque dui ante, maximus vitae lacus a, volutpat iaculis nisl. Pellentesque a est eget diam consectetur consequat sed sed quam.</p>
+          <p>Javier Clot provides labor legal advice to companies and employees about the settlement of labor disputes. His methods include examining and creating employment contracts as well as representing clients in collective bargaining and labor disputes. Javier is committed to defending workers' rights and making sure businesses abide by relevant labor laws. He is aware of the complexity of labor rules. Javier Clot ensures fair and balanced labor relations by providing practical ways to prevent and resolve labor disputes with painstaking attention to detail.</p>
         </div>
       </div>
       <div className={styles.card}>
         <Image
-          src="/fotoFirma.jpg"
+          src="/fotoMano.jpg"
           width={1000}
           height={1000}
           alt="AreasOfPractice"
         />
         <div className={styles.cardContent}>
-          <h2 className={styles.cardTitle}>Practice 2</h2>
-          <p className={styles.cardDescription}>This is a description of the card. It</p>
+          <h2 className={styles.cardTitle}>Labor law</h2>
+          <p className={styles.cardDescription} style={{textDecoration:'underline'}}><a href="https://www.britannica.com/topic/labour-law" target="_blank" rel="noopener noreferrer">Learn more</a></p>
         </div>
       </div>
     </div>
