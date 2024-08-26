@@ -162,3 +162,9 @@
     margin-bottom: 40px;
   }
 }
+
+@media (max-width: 820px) {
+  .imageBackground {
+    background-attachment: scroll;
+  }
+}
