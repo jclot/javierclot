@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import Modal from "@/components/Modal/modal";
 
 export default function Home() {
   return (
