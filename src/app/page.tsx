@@ -16,8 +16,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <hr className="commonHr" />
       <div className={styles.mainContent}>
+        <hr className="commonHr" />
         <section className={styles.biography}>
           <h1 className={styles.biographyTitle}>Biography</h1>
           <div className={styles.biographyDescription}>
