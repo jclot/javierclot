@@ -20,7 +20,7 @@ export default function Home() {
         <section className={styles.biography}>
           <h1 className={styles.biographyTitle}>Biography</h1>
           <div className={styles.biographyDescription}>
-            <p>Javier Clot, a notarial lawyer, integrates modernity and tradition in his legal practice. He has developed a distinct method that combines his clients' modern needs with legal rigour through more than three decades of experience. His career has led him through a variety of experiences, which have broadened his perspective on the law. As an independent professional, Javier is committed to providing a close and accessible service, maintaining his sophistication and excellence. His commitment is evident: to provide cutting-edge and efficient legal solutions, with a personal touch that distinguishes from the first meeting.
+            <p>Javier Clot, a <b>Costarican</b> notarial lawyer, integrates modernity and tradition in his legal practice. He has developed a distinct method that combines his clients' modern needs with legal rigour through more than three decades of experience. His career has led him through a variety of experiences, which have broadened his perspective on the law. As an independent professional, Javier is committed to providing a close and accessible service, maintaining his sophistication and excellence. His commitment is evident: to provide cutting-edge and efficient legal solutions, with a personal touch that distinguishes from the first meeting.
             </p>
           </div>
         </section>

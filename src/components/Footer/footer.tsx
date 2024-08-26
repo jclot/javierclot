@@ -4,7 +4,7 @@ import styles from "./footer.module.css";
 const Footer: React.FC = () => {
     return (
         <div>
-            <hr className="commonHr" />
+            <hr className="commonHr"></hr>
             <footer className={styles.footer}>
                 <div className={styles.footerContent}>
                     <div className={styles.footerSection}>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
                 <div className={styles.footerBottom}>
-                    <p>&copy; {new Date().getFullYear()} JAVIER CLOT. All rights reserved. Created & developed by <a href="https://github.com/jclot/">Julian Clot</a>.</p>
+                    <p>&copy; {new Date().getFullYear()} JAVIER CLOT. All rights reserved. Created & developed by <a href="https://github.com/jclot/" style={{ textDecoration: 'underline' }}>Julian Clot</a>.</p>
                 </div>
             </footer>
         </div>
