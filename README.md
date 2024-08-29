@@ -20,5 +20,6 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## About
 
-This project is the independent website of a lawyer who gives us some information about him and what he does. As practices or areas that involves his professionalism. This project is private and only for him. 
+    This project is the independent website of a lawyer who gives us some information about him and what he does. As practices or areas that involves his professionalism. This project is private and only for him. 
+
 I am using next js technology to build this website.
