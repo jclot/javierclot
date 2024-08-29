@@ -13,8 +13,8 @@ const About: React.FC = () => {
           <Image
             src="/fotoFirma2.jpg"
             alt="Image by the author"
-            width={400}
-            height={267}
+            width={360}
+            height={260}
             style={{ border: "1px solid #f5f5f5" }}
           />
         </div>
