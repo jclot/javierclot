@@ -95,8 +95,9 @@ a {
   }
 }
 
-@media (max-width: 900px) { 
-  html, 
+@media (max-width: 1180px) {
+
+  html,
   body {
     overflow-x: hidden;
   }
