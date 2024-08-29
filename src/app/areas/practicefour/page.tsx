@@ -22,7 +22,7 @@ const PracticeOne: React.FC = () => {
         />
         <div className={styles.cardContent}>
           <h2 className={styles.cardTitle}>Condominiums</h2>
-          <p className={styles.cardDescription} style={{textDecoration:'underline'}}><a href="https://www.britannica.com/topic/property-law" target="_blank" rel="noopener noreferrer">Learn more</a></p>
+          <p className={styles.cardDescription} style={{ textDecoration: 'underline' }}><a href="https://www.britannica.com/topic/property-law" target="_blank" rel="noopener noreferrer">Learn more</a></p>
         </div>
       </div>
     </div>

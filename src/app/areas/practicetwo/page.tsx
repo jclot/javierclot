@@ -22,7 +22,7 @@ const PracticeTwo: React.FC = () => {
         />
         <div className={styles.cardContent}>
           <h2 className={styles.cardTitle}>Labor law</h2>
-          <p className={styles.cardDescription} style={{textDecoration:'underline'}}><a href="https://www.britannica.com/topic/labour-law" target="_blank" rel="noopener noreferrer">Learn more</a></p>
+          <p className={styles.cardDescription} style={{ textDecoration: 'underline' }}><a href="https://www.britannica.com/topic/labour-law" target="_blank" rel="noopener noreferrer">Learn more</a></p>
         </div>
       </div>
     </div>
