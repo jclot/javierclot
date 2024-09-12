@@ -10,7 +10,7 @@ const PracticeTwo: React.FC = () => {
           <h1>Labor law</h1>
         </div>
         <div className={styles.areasDescription}>
-          <p>Javier Clot provides labor legal advice to companies and employees about the settlement of labor disputes. His methods include examining and creating employment contracts as well as representing clients in collective bargaining and labor disputes. Javier is committed to defending workers' rights and making sure businesses abide by relevant labor laws. He is aware of the complexity of labor rules. Javier Clot ensures fair and balanced labor relations by providing practical ways to prevent and resolve labor disputes with painstaking attention to detail.</p>
+          <p>Javier Clot provides labor legal advice to companies and employees about the settlement of labor disputes. His methods include examining and creating employment contracts as well as representing clients in collective bargaining and labor disputes. Javier is committed to defending workers rights and making sure businesses abide by relevant labor laws. He is aware of the complexity of labor rules. Javier Clot ensures fair and balanced labor relations by providing practical ways to prevent and resolve labor disputes with painstaking attention to detail.</p>
         </div>
       </div>
       <div className={styles.card}>

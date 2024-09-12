@@ -21,15 +21,14 @@ export default function Home() {
         <section className={styles.biography}>
           <h1 className={styles.biographyTitle}>Biography</h1>
           <div className={styles.biographyDescription}>
-            <p>Javier Clot, a <b>Costarican</b> notarial lawyer, integrates modernity and tradition in his legal practice. He has developed a distinct method that combines his clients' modern needs with legal rigour through more than three decades of experience. His career has led him through a variety of experiences, which have broadened his perspective on the law. As an independent professional, Javier is committed to providing a close and accessible service, maintaining his sophistication and excellence. His commitment is evident: to provide cutting-edge and efficient legal solutions, with a personal touch that distinguishes from the first meeting.
-            </p>
+            <p>Javier Clot, a <b>Costarican</b> notarial lawyer, integrates modernity and tradition in his legal practice. He has developed a distinct method that combines his clients modern needs with legal rigour through more than three decades of experience. His career has led him through a variety of experiences, which have broadened his perspective on the law. As an independent professional, Javier is committed to providing a close and accessible service, maintaining his sophistication and excellence. His commitment is evident: to provide cutting-edge and efficient legal solutions, with a personal touch that distinguishes from the first meeting.</p>
           </div>
         </section>
         <hr className="commonHr" />
         <section className={styles.specialization}>
           <h1 className={styles.specializationTitle}>Specialization</h1>
           <div className={styles.specializationDescription}>
-            <p>Javier Clot has over 30 years of legal expertise and has made a name for himself as one of the most reputable attorneys in the fields of criminal and business law. He has spent his entire professional life assisting people with complicated legal problems by offering legal counsel and representation. His methodical approach and extensive legal knowledge enable him to provide tailored and efficient answers. As a solo attorney now, he still devotes his time to upholding his clients' rights with honesty and passion, promising top-notch legal representation in each and every instance.</p>
+            <p>Javier Clot has over 30 years of legal expertise and has made a name for himself as one of the most reputable attorneys in the fields of criminal and business law. He has spent his entire professional life assisting people with complicated legal problems by offering legal counsel and representation. His methodical approach and extensive legal knowledge enable him to provide tailored and efficient answers. As a solo attorney now, he still devotes his time to upholding his clients rights with honesty and passion, promising top-notch legal representation in each and every instance.</p>
           </div>
         </section>
         <hr className="commonHr" />

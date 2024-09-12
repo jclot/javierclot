@@ -10,7 +10,7 @@ const PracticeTree: React.FC = () => {
           <h1>Commercial law</h1>
         </div>
         <div className={styles.areasDescription}>
-          <p>Javier Clot assists businesses of all sizes in navigating the intricacies of the business world by offering knowledgeable legal counsel on commercial law. Protecting his clients' business interests, Javier provides a comprehensive service that includes everything from company incorporation to contract negotiation and drafting. In order to ensure that every transaction is handled with the highest care and precision, his expertise includes providing advice on mergers, acquisitions, and the resolution of commercial disputes. Javier Clot is committed to helping businesses expand and remain stable by providing them with legal solutions that boost their capacity to make money.</p>
+          <p>Javier Clot assists businesses of all sizes in navigating the intricacies of the business world by offering knowledgeable legal counsel on commercial law. Protecting his clients business interests, Javier provides a comprehensive service that includes everything from company incorporation to contract negotiation and drafting. In order to ensure that every transaction is handled with the highest care and precision, his expertise includes providing advice on mergers, acquisitions, and the resolution of commercial disputes. Javier Clot is committed to helping businesses expand and remain stable by providing them with legal solutions that boost their capacity to make money.</p>
         </div>
       </div>
       <div className={styles.card}>
