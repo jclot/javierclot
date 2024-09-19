@@ -2,7 +2,7 @@ import ContactNotificationEmail from "@/emails/ContactNotificationEmail";
 import UserMessageEmail from "@/emails/UserMessageEmail";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEYY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 const mainEmail = process.env.MAIN_EMAIL as string;
 const audienceId = process.env.AUDIENCE_ID as string;
 
