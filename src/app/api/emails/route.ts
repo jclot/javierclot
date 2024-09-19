@@ -11,14 +11,14 @@ export async function POST(request: Request) {
     const { user_name, user_email, message } = await request.json();
 
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "javierclot.com",
       to: user_email,
       subject: "Thank you for contacting us",
       react: ContactNotificationEmail({ user_name }),
     });
 
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "javierclot.com",
       to: mainEmail,
       subject: "Nuevo mensaje de contacto",
       react: UserMessageEmail({ user_name, user_email, message }),
