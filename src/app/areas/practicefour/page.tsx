@@ -7,7 +7,7 @@ const PracticeOne: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.areasIntroduction}>
         <div className={styles.areasTitle}>
-          <h1>Condominiums</h1>
+          <h1>Condo</h1>
         </div>
         <div className={styles.areasDescription}>
           <p>Javier Clot offers owners and managers of horizontal properties specific advise in the condominium market. He has drafted and reviewed condominium rules, mediated disputes between condo owners, and represented condo owners in lawsuits pertaining to condominiums. Javier makes sure that everyone knows the rules and abides by them, so that people living in condominium complexes can live in harmony with one another. His legal strategy guarantees the upholding of property rights and appropriate property management, fostering a secure and orderly environment.</p>
