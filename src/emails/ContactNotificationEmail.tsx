@@ -18,9 +18,6 @@ export default function ContactNotificationEmail({ user_name }: ContactNotificat
           <Text style={styles.text}>
             We have received your message and one of our representatives will contact you as soon as possible. Thank you for your patience.
           </Text>
-          <Text style={styles.text}>
-            In the meantime, if you have any additional questions, please feel free to reply to this email.
-          </Text>
           <Section style={styles.signature}>
             <Text style={styles.text}>
               Sincerely yours,
