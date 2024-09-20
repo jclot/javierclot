@@ -3,20 +3,28 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
+import { CiMenuBurger } from "react-icons/ci";
 
 const Navbar: React.FC = () => {
     const [dropDownOpen, setDropDownOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleDropDown = () => {
         setDropDownOpen(!dropDownOpen);
     }
 
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen);
+    }
     return (
         <nav className={styles.navbar}>
             <div className={styles.logo}>
                 <Link href="/">JAVIER<br></br>CLOT</Link>
             </div>
-            <ul className={styles.navLinks}>
+            <div className={styles.mobileMenuIcon} onClick={toggleMobileMenu}>
+                {mobileMenuOpen ? <CiMenuBurger size={40} /> : <CiMenuBurger size={40} />}
+            </div>
+            <ul className={`${styles.navLinks} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
                 <li>
                     <Link href="/">Home</Link>
                 </li>

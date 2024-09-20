@@ -1,8 +1,9 @@
 .navbar {
   display: flex;
   justify-content: space-around;
-  align-items: center;;
+  align-items: center;
   padding: 2rem 1rem;
+  position: relative;
 }
 
 .logo {
@@ -24,14 +25,17 @@
   list-style: none;
 }
 
-.navLinks li a {
+.navLinks li a,
+.navLinks li div {
   color: #F5F5F5;
   text-decoration: underline;
   font-size: 1.5rem;
   transition: color 0.1s ease-in-out;
+  cursor: pointer;
 }
 
-.navLinks li a:hover {
+.navLinks li a:hover,
+.navLinks li div:hover {
   color: #B69D74;
 }
 
@@ -54,7 +58,6 @@
 .dropDownMenu li {
   padding: 0.6rem;
   text-align: center;
-  /* border: 1px solid #F5F5F5; */
 }
 
 .dropDownMenu li a {
@@ -70,24 +73,39 @@
   background-color: #B69D74;
 }
 
-@media (max-width: 871px) {
+.mobileMenuIcon {
+  display: none;
+  font-size: 2rem;
+  color: #F5F5F5;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
   .navbar {
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    border: 1px solid #F5F5F5;
+  }
+
+  .mobileMenuIcon {
+    display: block;
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
   }
 
   .navLinks {
+    display: none;
     flex-direction: column;
     gap: 1rem;
   }
 
-  .navLinks li a {
-    font-size: 1.2rem;
+  .mobileMenuOpen {
+    display: flex;
   }
 
-  .logo {
-    margin-bottom: 1rem;
+  .navLinks li a {
+    font-size: 1.2rem;
   }
 
   .dropDownMenu {

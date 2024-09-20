@@ -8,17 +8,17 @@ const About: React.FC = () => {
       <div className={styles.aboutTitle}>
         <h1>About me</h1>
       </div>
-      <div className={styles.content}>
-        <div className={styles.image}>
+      <div className={styles.aboutContent}>
+        <div className={styles.aboutImage}>
           <Image
             src="/fotoFirma2.jpg"
             alt="Image by the author"
-            width={360}
-            height={260}
+            layout="fill"
+
             style={{ border: "1px solid #f5f5f5" }}
           />
         </div>
-        <div className={styles.text}>
+        <div className={styles.aboutDescription}>
           <p>Javier Clot is a dedicated professional whose dedication and passion for the law are well known. He is a person who values humane treatment, transparency, and honesty in all his interactions, in addition to his exceptional career in the notarial profession. Javier is distinguished by his empathy and his capacity to comprehend the needs of those who seek his advice, establishing a climate of confidence and trust. He can authentically connect with his clients through his meticulous approach and listening ability, providing solutions that not only meet the highest legal standards but also show a deep respect for the people who trust him.</p>
         </div>
       </div>

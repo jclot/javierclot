@@ -83,9 +83,17 @@
 
 .biographyDescription {
   color: #f5f5f5;
-  text-align: center;
+  text-align: justify;
   max-width: 500px;
   margin: 3rem 0;
+}
+
+.biographyDescription::first-letter {
+  font-size: 4em;
+  font-weight: bold;
+  float: left;
+  line-height: 1;
+  margin-right: 0.1em;
 }
 
 .specialization {
@@ -105,7 +113,7 @@
 
 .specializationDescription {
   color: #f5f5f5;
-  text-align: center;
+  text-align: justify;
   max-width: 500px;
   margin-bottom: 3rem;
 }
@@ -127,7 +135,7 @@
 
 .servicesDescription {
   color: #f5f5f5;
-  text-align: center;
+  text-align: justify;
   max-width: 500px;
   margin-bottom: 3rem;
 }
