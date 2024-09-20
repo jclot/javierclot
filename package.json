@@ -10,13 +10,17 @@
     "email": "email dev --dir src/emails"
   },
   "dependencies": {
-    "@react-email/components": "^0.0.22",
+    "@react-email/components": "^0.0.25",
     "@vercel/speed-insights": "^1.0.12",
     "next": "14.2.8",
     "react": "^18",
     "react-dom": "^18",
+<<<<<<< HEAD
     "react-email": "2.1.6",
     "react-icons": "^5.3.0",
+=======
+    "react-email": "3.0.1",
+>>>>>>> f509d46184ff9fe138036bfb7fd3867e78dc8c9a
     "resend": "^4.0.0"
   },
   "devDependencies": {
