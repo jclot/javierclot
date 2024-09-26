@@ -51,7 +51,6 @@
 .submitButton {
     display: inline;
     padding: 10px 20px;
-    font-family: var(--font-mono);
     font-size: 20px;
     color: #f5f5f5;
     background-color: #B69D74;
@@ -89,4 +88,14 @@
 .formGroup textarea:autofill:active {
     box-shadow: 0 0 0 30px #f5f5f5 inset !important;
     -webkit-text-fill-color: #1f2839 !important;
+}
+
+@media (max-width: 700px) {
+    .formGroup label {
+        font-size: 1.3rem;
+    }
+
+    .submitButton {
+        font-size: 1rem;
+    }
 }

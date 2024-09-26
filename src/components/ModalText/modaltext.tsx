@@ -1,4 +1,4 @@
-// No se implementa todavia, se esta repasando la idea.
+// It is not implemented so far, but it is being considered to facilitate the reading of the information.
 
 import React from 'react';
 import styles from './modaltext.module.css';

@@ -14,7 +14,6 @@ const About: React.FC = () => {
             src="/fotoFirma2.jpg"
             alt="Image by the author"
             layout="fill"
-
             style={{ border: "1px solid #f5f5f5" }}
           />
         </div>

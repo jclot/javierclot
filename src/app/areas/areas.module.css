@@ -50,4 +50,11 @@
 }
 
 @media (max-width: 700px) {
+    .areasDescription {
+        width: 100%;
+        max-width: 301px;
+        margin: 0 auto 20px;
+        margin-top: 20px;
+        text-align: justify;
+    }
 }

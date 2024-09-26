@@ -40,3 +40,16 @@
     color: #F5F5F5;
     text-align: center;
 }
+
+@media (max-width: 700px) {
+    .cardContainers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+}
