@@ -155,6 +155,7 @@
   .biographyDescription {
     max-width: 300px;
     margin: 2rem auto;
+    margin-bottom: 40px;
   }
 
   .biography {
