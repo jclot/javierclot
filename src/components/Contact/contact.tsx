@@ -3,16 +3,19 @@
 import React, { useState, FormEvent } from "react";
 import styles from "./contact.module.css";
 import Modal from "../Modal/modal";
+import Loader from "../Loader/loader";
 
 const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState({
         user_name: "",
         user_email: "",
-        message: ""
+        user_number: "",
+        message: "",
     });
     const [status, setStatus] = useState<string | null>(null);
     const [isModalSuccessOpen, setIsModalSuccessOpen] = useState<boolean>(false)
     const [isModalFailureOpen, setIsModalFailureOpen] = useState<boolean>(false)
+    const [loading, setLoading] = useState<boolean>(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
@@ -23,6 +26,7 @@ const ContactForm: React.FC = () => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
+        setLoading(true);
         try {
             const response = await fetch("/api/emails", {
                 method: "POST",
@@ -43,6 +47,8 @@ const ContactForm: React.FC = () => {
             console.error("Error sending message:", error);
             setStatus("Failed to send message.");
             setIsModalFailureOpen(true);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -64,8 +70,10 @@ const ContactForm: React.FC = () => {
                         type="text"
                         id="name"
                         name="user_name"
+                        placeholder="First and last name"
                         value={formData.user_name}
                         onChange={handleChange}
+                        className={styles.placeholderColor}
                         required
                     />
                 </div>
@@ -76,8 +84,24 @@ const ContactForm: React.FC = () => {
                         type="email"
                         id="email"
                         name="user_email"
+                        placeholder="example@gmail.com"
                         value={formData.user_email}
                         onChange={handleChange}
+                        className={styles.placeholderColor}
+                        required
+                    />
+                </div>
+                <div className={styles.formGroup}>
+                    <label htmlFor="number">Phone number</label>
+                    <input
+                        autoComplete="off"
+                        type="tel"
+                        id="number"
+                        name="user_number"
+                        placeholder="(506)"
+                        value={formData.user_number}
+                        onChange={handleChange}
+                        className={styles.placeholderColor}
                         required
                     />
                 </div>
@@ -86,13 +110,16 @@ const ContactForm: React.FC = () => {
                     <textarea
                         id="message"
                         name="message"
+                        placeholder="Some message"
                         value={formData.message}
                         onChange={handleChange}
+                        className={styles.placeholderColor}
                         required
                     />
                 </div>
                 <button type="submit" className={styles.submitButton}>SUBMIT</button>
             </form>
+            {loading && <Loader />}
             <Modal isOpen={isModalSuccessOpen} onClose={closeModal}>
                 <h2 style={{ marginBottom: 10, color: '#B69D74', fontStyle: 'italic' }}>Your message has been sent successfully!</h2>
                 <p>We will get back to you as soon as possible.</p>

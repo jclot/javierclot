@@ -90,6 +90,10 @@
     -webkit-text-fill-color: #1f2839 !important;
 }
 
+.placeholderColor::placeholder {
+    color: #1f2839;
+}
+
 @media (max-width: 700px) {
     .formGroup label {
         font-size: 1.3rem;
