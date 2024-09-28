@@ -84,7 +84,7 @@ const ContactForm: React.FC = () => {
                         type="email"
                         id="email"
                         name="user_email"
-                        placeholder="example@gmail.com"
+                        placeholder="Example@gmail.com"
                         value={formData.user_email}
                         onChange={handleChange}
                         className={styles.placeholderColor}
@@ -98,7 +98,7 @@ const ContactForm: React.FC = () => {
                         type="tel"
                         id="number"
                         name="user_number"
-                        placeholder="(506)"
+                        placeholder="(+506)"
                         value={formData.user_number}
                         onChange={handleChange}
                         className={styles.placeholderColor}
