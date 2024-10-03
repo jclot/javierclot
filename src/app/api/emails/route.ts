@@ -9,7 +9,11 @@ const serverDomain = process.env.SERVER_DOMAIN as string;
 
 export async function POST(request: Request) {
   try {
-    const { user_name, user_email, message } = await request.json();
+    const { user_name, user_email, user_number, message } = await request.json();
+
+    if (!user_name || !user_email || !user_number || !message) {
+      throw new Error("Missing required fields");
+    }
 
     await resend.emails.send({
       from: serverDomain,
@@ -22,25 +26,36 @@ export async function POST(request: Request) {
       from: serverDomain,
       to: mainEmail,
       subject: "Nuevo mensaje de contacto",
-      react: UserMessageEmail({ user_name, user_email, message }),
+      react: UserMessageEmail({
+        user_name,
+        user_email,
+        user_number,
+        message,
+      }),
     });
 
     await resend.contacts.create({
       email: user_email,
       firstName: user_name,
       unsubscribed: false,
-      audienceId: audienceId
-    })
-
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
+      audienceId,
     });
+
+    return new Response(
+      JSON.stringify({ success: true }),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   } catch (error) {
     console.error("Failed to send emails:", error);
-    return new Response(JSON.stringify({ success: false, error }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+    return new Response(
+      JSON.stringify({ success: false, error: error }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   }
 }

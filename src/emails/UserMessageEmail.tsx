@@ -3,10 +3,11 @@ import { Html, Head, Preview, Body, Container, Section, Text, Heading } from "@r
 interface UserMessageEmailProps {
     user_name: string;
     user_email: string;
+    user_number: string;
     message: string;
 }
 
-export default function UserMessageEmail({ user_name, user_email, message }: UserMessageEmailProps) {
+export default function UserMessageEmail({ user_name, user_email, user_number, message }: UserMessageEmailProps) {
     return (
         <Html>
             <Head />
@@ -16,6 +17,7 @@ export default function UserMessageEmail({ user_name, user_email, message }: Use
                     <Heading style={styles.heading}>Nuevo mensaje de {user_name}</Heading>
                     <Text style={styles.text}>Nombre: {user_name}</Text>
                     <Text style={styles.text}>Correo electrónico: {user_email}</Text>
+                    <Text style={styles.text}>Numero de telefono: {user_number}</Text>
                     <Section style={styles.messageSection}>
                         <Text style={styles.text}>Mensaje:</Text>
                         <Text style={styles.messageText}>{message}</Text>

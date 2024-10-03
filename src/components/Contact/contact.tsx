@@ -4,6 +4,8 @@ import React, { useState, FormEvent } from "react";
 import styles from "./contact.module.css";
 import Modal from "../Modal/modal";
 import Loader from "../Loader/loader";
+// import { PhoneInput } from "react-international-phone";
+import 'react-international-phone/style.css';
 
 const ContactForm: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -17,38 +19,36 @@ const ContactForm: React.FC = () => {
     const [isModalFailureOpen, setIsModalFailureOpen] = useState<boolean>(false)
     const [loading, setLoading] = useState<boolean>(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
+    const handleChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+        setFormData(prevState => ({ ...prevState, [e.target.name]: e.target.value })), [setFormData]);
 
     const handleSubmit = async (e: FormEvent) => {
-        e.preventDefault();
-        setLoading(true);
-        try {
-            const response = await fetch("/api/emails", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData),
-            });
-            const result = await response.json();
-            if (result.success) {
-                setStatus("Your message has been sent successfully!");
-                setIsModalSuccessOpen(true);
-            } else {
+        if (e) {
+            e.preventDefault();
+            setLoading(true);
+            try {
+                const response = await fetch("/api/emails", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData),
+                });
+                const result = await response.json();
+                if (result?.success) {
+                    setStatus("Your message has been sent successfully!");
+                    setIsModalSuccessOpen(true);
+                } else {
+                    setStatus("Failed to send message.");
+                    setIsModalFailureOpen(true);
+                }
+            } catch (error) {
+                console.error("Error sending message:", error);
                 setStatus("Failed to send message.");
                 setIsModalFailureOpen(true);
+            } finally {
+                setLoading(false);
             }
-        } catch (error) {
-            console.error("Error sending message:", error);
-            setStatus("Failed to send message.");
-            setIsModalFailureOpen(true);
-        } finally {
-            setLoading(false);
         }
     };
 
@@ -70,7 +70,7 @@ const ContactForm: React.FC = () => {
                         type="text"
                         id="name"
                         name="user_name"
-                        placeholder="First and last name"
+                        placeholder="first and last name"
                         value={formData.user_name}
                         onChange={handleChange}
                         className={styles.placeholderColor}
@@ -84,7 +84,7 @@ const ContactForm: React.FC = () => {
                         type="email"
                         id="email"
                         name="user_email"
-                        placeholder="Example@gmail.com"
+                        placeholder="example@gmail.com"
                         value={formData.user_email}
                         onChange={handleChange}
                         className={styles.placeholderColor}
@@ -98,19 +98,26 @@ const ContactForm: React.FC = () => {
                         type="tel"
                         id="number"
                         name="user_number"
-                        placeholder="(+506)"
                         value={formData.user_number}
                         onChange={handleChange}
                         className={styles.placeholderColor}
                         required
                     />
+                    {/* <PhoneInput 
+                        defaultCountry="cr"
+                        value={formData.user_number}
+                        name="user_number"
+                        className={styles.phoneInput}
+                        onChange={value => setFormData(prevState => ({ ...prevState, user_number: value }))}
+                        required
+                    /> */}
                 </div>
                 <div className={styles.formGroup}>
                     <label htmlFor="message">Message</label>
                     <textarea
                         id="message"
                         name="message"
-                        placeholder="Some message"
+                        placeholder="some message"
                         value={formData.message}
                         onChange={handleChange}
                         className={styles.placeholderColor}
@@ -120,16 +127,21 @@ const ContactForm: React.FC = () => {
                 <button type="submit" className={styles.submitButton}>SUBMIT</button>
             </form>
             {loading && <Loader />}
-            <Modal isOpen={isModalSuccessOpen} onClose={closeModal}>
-                <h2 style={{ marginBottom: 10, color: '#B69D74', fontStyle: 'italic' }}>Your message has been sent successfully!</h2>
-                <p>We will get back to you as soon as possible.</p>
-            </Modal>
-            <Modal isOpen={isModalFailureOpen} onClose={closeModal}>
-                <h2 style={{ marginBottom: 10, color: '#B69D74', fontStyle: 'italic' }}>Your message could not be sent.</h2>
-                <p>Please try again, or send an email directly to <a href="mailto:jaclot@hotmail.com">jaclot@hotmail.com</a>.</p>
-            </Modal>
+            {isModalSuccessOpen && (
+                <Modal isOpen={isModalSuccessOpen} onClose={closeModal}>
+                    <h2 style={{ marginBottom: 10, color: '#B69D74', fontStyle: 'italic' }}>Your message has been sent successfully!</h2>
+                    <p>We will get back to you as soon as possible.</p>
+                </Modal>
+            )}
+            {isModalFailureOpen && (
+                <Modal isOpen={isModalFailureOpen} onClose={closeModal}>
+                    <h2 style={{ marginBottom: 10, color: '#B69D74', fontStyle: 'italic' }}>Your message could not be sent.</h2>
+                    <p>Please try again, or send an email directly to <a href="mailto:jaclot@hotmail.com">jaclot@hotmail.com</a>.</p>
+                </Modal>
+            )}
         </div>
     );
 };
+
 
 export default ContactForm;
