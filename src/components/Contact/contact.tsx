@@ -98,6 +98,7 @@ const ContactForm: React.FC = () => {
                         type="tel"
                         id="number"
                         name="user_number"
+                        placeholder="phone number"
                         value={formData.user_number}
                         onChange={handleChange}
                         className={styles.placeholderColor}
