@@ -12,7 +12,7 @@
   "dependencies": {
     "@react-email/components": "^0.0.25",
     "@vercel/speed-insights": "^1.1.0",
-    "next": "^14.2.23",
+    "next": "^15.1.7",
     "react": "^18",
     "react-dom": "^18",
     "react-email": "^3.0.6",
